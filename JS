@@ -1,7 +1,1 @@
-var startButton = document.getElementById("start-button");
 
-startButton.addEventListener("click", function() {
-  if (confirm("Are you sure you want to start?")) {
-    // Add your desired actions here when the user clicks "OK"
-  }
-});
