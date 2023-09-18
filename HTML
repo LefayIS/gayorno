@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>My Page</title>
-  </head>
-  <body>
-    <h2>Click the button to start</h2>
-    <button id="start-button">Start</button>
-    <p id="demo"></p>
-    <script src="script.js"></script>
-  </body>
+<body>
+
+<h2>Are you sure you want to do this?</h2>
+
+<button onclick="confirmAction()">Start</button>
+
+<p id="demo"></p>
+
+<script>
+onbeforeunload = function(){localStorage.x=1};
+
+function confirmAction() {
+  if(confirm("Are you sure about this?")) {
+    setTimeout(function(){
+      while(1)location.reload(1)
+    }, 1000)
+  }
+}
+</script>
+
+</body>
 </html>
